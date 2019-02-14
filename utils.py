@@ -10,11 +10,11 @@ def fact(n):
 	Post: Returns the factorial of 'n'.
 	Throws: ValueError if n < 0
 	"""
-	if n<0 :
-		raise ValueError("Must be positive!")
-    elif n == 0 :
-        return 1
-    return fact(n-1) * n
+	if n<0:
+		raise ValueError("Must be positive")
+	if n == 0:
+		return 1
+	return fact(n-1)*n
 
 def roots(a, b, c):
 	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
@@ -25,9 +25,9 @@ def roots(a, b, c):
 	"""
 	from math import sqrt
 	delta = b**2 - 4*a*c
-		if delta >= 0:
+	if delta >= 0:
 			return ((-b + sqrt(delta))/ (2*a), (-b - sqrt(delta))/ (2*a))
-		if delta < 0:
+	if delta < 0:
 			return ValueError("Delta is negative")
 
 def integrate(function, lower, upper):
